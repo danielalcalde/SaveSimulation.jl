@@ -1,0 +1,10 @@
+name = "SaveSimulation"
+uuid = "4556b58c-26c9-40f6-b0f5-b25c45388b4a"
+authors = ["Daniel Alcalde <d.alcalde.puente@fz-juelich.de>"]
+version = "0.1.0"
+
+[deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
