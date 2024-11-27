@@ -1,4 +1,4 @@
-module QOS
+module SaveSimulation
 
 using Printf
 using JLD2
@@ -7,8 +7,9 @@ using DataStructures
 
 include("parameters.jl")
 include("load.jl")
+include("prepare_save_folder.jl")
 
-export print_non_zero, load_dir
+export print_non_zero, load_dir, get_save_file_path_and_createdir
 
 function print_non_zero(array::AbstractArray)
     # Create a list to store indices

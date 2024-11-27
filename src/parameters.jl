@@ -10,4 +10,16 @@ end
 Base.getindex(p::Parameters, i::Int) = p.values[i]
 Base.getindex(p::Parameters, i::String) = p.values[p.keys[i]]
 Base.lastindex(p::Parameters) = lastindex(p.values)
-Base.show(io::IO, p::Parameters) = print(io, "Parameters($(collect(keys(p.keys))))")
+function Base.show(io::IO, p::Parameters)
+    print(io, "Parameters(")
+    first = true
+    for (key, idx) in p.keys
+        if !first
+            print(io, ", ")
+        else
+            first = false
+        end
+        print(io, key, " => ", p.values[idx])
+    end
+    print(io, ")")
+end
